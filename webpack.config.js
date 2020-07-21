@@ -52,6 +52,9 @@ Encore
         config.useBuiltIns = 'usage';
         config.corejs = 3;
     })
+    .configureBabel((config)=>{
+        config.plugins.push('@babel/plugin-proposal-class-properties');
+    })
 
     // enables Sass/SCSS support
     .enableSassLoader()
